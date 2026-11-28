@@ -5,8 +5,8 @@ public class closestNumber {
     static int closestNumber(int n, int m){
         int lower = (n/m)*m;
         int upper;
-        if (n >= 0) {
-            upper = lower + Math.abs(m);
+        if (n >= 0) { // For positive n, the upper closest number is lower + m
+            upper = lower + Math.abs(m);// For negative n, the upper closest number is lower - m
         } else {
             upper = lower - Math.abs(m);
         }
